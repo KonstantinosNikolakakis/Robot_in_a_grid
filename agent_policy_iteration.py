@@ -1,6 +1,6 @@
 ### Policy iteration algorithm for a robot. The enviroment is grid of dimensions HEIGHT x WIDTH
 ### Grid variables: HEIGHT, WIDTH, START, TARGET, WALL, HOLES
-### The program find the optimal policy (minimum distance) that avoids the holes 'O' and the walls 'W' and reaches the target position 'T' 
+### The program finds the optimal policy (minimum distance) that avoids the holes 'O' and the walls 'W' and reaches the target position 'T' 
 ### Output: The optimal policy and the optimal values V*
 
 import numpy as np
