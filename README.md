@@ -1,9 +1,9 @@
 # Robot_in_a_grid
 Policy evaluation and policy iteration 
 
-The program finds the optimal policy (minimum distance) that avoids the holes 'O' and the walls 'W' and reaches the target position 'T' 
-See optimal_path.png as an example.
+The program finds the optimal policy (minimum distance) that avoids the holes 'O' and the walls 'W' and reaches the target position 'T'. 
 
-Output: The optimal policy and the optimal values V*
+
+Output: The optimal policy and the optimal values V*, see optimal_path.png as an example.
 
 Grid variables: HEIGHT, WIDTH, positions of START, TARGET, WALL, HOLES
