@@ -1,8 +1,8 @@
 ### Policy iteration algorithm for a stochastic state space. 
 ### If agent's action at state S is A then the robot does A with probability 0.5, and with probability 0.5/3 one of the 3 other actions
-###  P( S'=(x+1,y) | S=(x,y), A='Up' )=0.5 : If the action is "go up" the probability to go up is 0.5
-###  and P( S'=(x-1,y) | S=(x,y), A='Up' ) = P( S'=(x,y+1) | S=(x,y), A='Up' ) = P( S'=(x,y-1) | S=(x,y), A='Up' ) = 0.5/3  
-
+### for example:  P( S'=(x+1,y) | S=(x,y), A='Up' )=0.5 : If the action is "go up" the probability to go up is 0.5
+### and P( S'=(x-1,y) | S=(x,y), A='Up' ) = P( S'=(x,y+1) | S=(x,y), A='Up' ) = P( S'=(x,y-1) | S=(x,y), A='Up' ) = 0.5/3  
+### the above similarly holds for the rest of actions A='Right', A='Left', A='Down' 
 
 ### Grid variables: HEIGHT, WIDTH, START, TARGET, WALL, HOLES
 ### The program finds the optimal policy (minimum distance) that avoids the holes 'O' and the walls 'W' and reaches the target position 'T' 
