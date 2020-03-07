@@ -98,7 +98,7 @@ if __name__=="__main__":
 				if (v > greatest_value):
 					greatest_value=v
 					best_action=a 
-				policy[s]=best_action
+			policy[s]=best_action
 
 	##############################################################
 
