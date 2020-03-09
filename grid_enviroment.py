@@ -135,3 +135,10 @@ class Grid:
 				elif ((x,y) in self.hole): self.rewards[x][y]=-1
 				elif ((x,y) in self.obj_pos):	self.rewards[x][y]=None # the position of walls are not reachable
 		return self.rewards
+
+	def game_over(self):
+		game_over=False
+		if ((self.i,self.j)==self.target) or ((self.i,self.j) in self.hole):
+			game_over=True
+		return game_over
+			
