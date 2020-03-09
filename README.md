@@ -5,7 +5,9 @@ The program finds the optimal policy (minimum distance) that avoids the holes 'O
 
 Policy_iteration.py
 -------------------
+
 Input: HEIGHT, WIDTH, positions of START, TARGET, WALL, HOLES
+
 Output: The optimal policy and the optimal values V*, see optimal_path.png.
 
 
