@@ -92,7 +92,7 @@ if __name__=="__main__":
 		else:
 			V[s]=0
 	
-	for t in range(5000):
+	for t in range(5000): # Monte-Carlo runs
 
 		states_returns = play_game(grid,FIXED_POLICY) # play an episode, and get the returns for each state 
 		
