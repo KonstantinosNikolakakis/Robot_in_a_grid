@@ -14,11 +14,7 @@ WALL  = {(1,1)} # wall position
 TARGET = (0,3)	# target position
 HOLES = {(1,3)} # holes' position
 
-
-################# Policy Iteration ####################################################################################
-
-
-
+#################  Monte-Carlo policy evaluation ####################################################################################
 GAMMA = 0.9
 
 global states, actions
