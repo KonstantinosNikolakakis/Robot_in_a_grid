@@ -1,5 +1,5 @@
 # Robot_in_a_grid
-Policy evaluation and policy iteration 
+Policy evaluation, policy iteration and value iteration. 
 
 The program finds the optimal policy (minimum distance) that avoids the holes 'O' and the walls 'W' and reaches the target position 'T'. 
 
