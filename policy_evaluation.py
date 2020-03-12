@@ -52,7 +52,9 @@ if __name__=="__main__":
 		
 	grid=Grid(3,4,(2,0),{(1,1)},(0,3),{(1,3)})
 	penalty=-0.1
-	grid.set_rewards(penalty)
+	target_gain=1 # gain at target
+	hole_cost=-1 # cost to fall in a hole
+	grid.set_rewards(penalty,hole_cost,target_gain) # initialize the penalty for each move
 	states,actions=grid.State_space_Generator()
 	s=grid.draw_grid()
 	

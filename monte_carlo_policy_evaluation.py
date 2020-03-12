@@ -14,7 +14,11 @@ WALL  = {(1,1)} # wall position
 TARGET = (0,3)	# target position
 HOLES = {(1,3)} # holes' position
 
-#################  Monte-Carlo policy evaluation ####################################################################################
+
+################# Policy Iteration ####################################################################################
+
+
+
 GAMMA = 0.9
 
 global states, actions
@@ -76,7 +80,9 @@ if __name__=="__main__":
 		
 	grid=Grid(HEIGHT,WIDTH,START,WALL,TARGET,HOLES)
 	penalty=-0.1
-	grid.set_rewards(penalty)
+	target_gain=1 # gain at target
+	hole_cost=-1 # cost to fall in a hole
+	grid.set_rewards(penalty,hole_cost,target_gain) # initialize the penalty for each move
 	states,actions=grid.State_space_Generator()
 	s=grid.draw_grid()
 	
@@ -92,7 +98,7 @@ if __name__=="__main__":
 		else:
 			V[s]=0
 	
-	for t in range(5000): # Monte-Carlo runs
+	for t in range(5000):
 
 		states_returns = play_game(grid,FIXED_POLICY) # play an episode, and get the returns for each state 
 		

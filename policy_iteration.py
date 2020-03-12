@@ -27,7 +27,9 @@ if __name__=="__main__":
 		
 	grid=Grid(HEIGHT, WIDTH, START, WALL, TARGET, HOLES) # initialize the enviroemnt
 	penalty=-0.1 # penalize each move
-	grid.set_rewards(penalty) # generate the resward for all states
+	target_gain=1 # gain at target
+	hole_cost=-1 # cost to fall in a hole
+	grid.set_rewards(penalty,hole_cost,target_gain) # initialize the penalty for each move
 	states,actions=grid.State_space_Generator() # generate the state space and the corresponding actions
 	
 	grid.draw_grid() # draw the grid at the initial state

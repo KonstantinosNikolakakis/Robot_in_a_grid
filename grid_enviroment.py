@@ -127,12 +127,12 @@ class Grid:
 		return state_space_positions,state_space_moves
 
 	### set_rewards(): creates the rewards for each action
-	def set_rewards(self,penalty):
+	def set_rewards(self,penalty,cost,gain):
 		self.rewards= penalty*np.ones((self.height,self.width))
 		for x in range(self.height):
 			for y in range(self.width):
-				if ((x,y)== self.target): self.rewards[x][y]=+1
-				elif ((x,y) in self.hole): self.rewards[x][y]=-1
+				if ((x,y)== self.target): self.rewards[x][y]=gain
+				elif ((x,y) in self.hole): self.rewards[x][y]=cost
 				elif ((x,y) in self.obj_pos):	self.rewards[x][y]=None # the position of walls are not reachable
 		return self.rewards
 
