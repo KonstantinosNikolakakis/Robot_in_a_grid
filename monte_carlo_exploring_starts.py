@@ -149,6 +149,9 @@ if __name__=="__main__":
 
 	print(deltas)
 	plt.plot(deltas)
+	plt.title("Maximum change among episodes in the Q(s,a) table")
+	plt.xlabel("Number of episodes")
+	plt.ylabel("Maximum change in the Q table")
 	plt.show()
 	print_policy(policy,grid)
 	
